@@ -11,12 +11,12 @@
 #>
 
 <#
-        Function:  GetRepeatingLetter $mystring
+        Function:  GetFirstRepeatingLetter $mystring
         Arguments: $foo = string of any length
         Return:    $return_value = first repeating character (blank if no repeating)
 #>
 
-Function GetRepeatingLetter {
+Function GetFirstRepeatingLetter {
     param (
         [string[]]$foo
     )
@@ -48,16 +48,16 @@ Function GetRepeatingLetter {
 <#
  Tests for function
  Test cases:
-     powershell -File .\FirstRepeatingValue.ps1 samplestring      (should return 's'
-     powershell -File .\FirstRepeatingValue.ps1 sampleample       (should return 'a'
-     powershell -File .\FirstRepeatingValue.ps1 samplenothing     (should return ''
-     powershell -File .\FirstRepeatingValue.ps1 "sample nothing " (should return ' '
-     powershell -File .\FirstRepeatingValue.ps1 ""                (should return '')
-     powershell -File .\FirstRepeatingValue.ps1                   (should return '')
+     powershell -File .\GetFirstRepeatingLetter.ps1 samplestring      (should return 's'
+     powershell -File .\GetFirstRepeatingLetter.ps1 sampleample       (should return 'a'
+     powershell -File .\GetFirstRepeatingLetter.ps1 samplenothing     (should return ''
+     powershell -File .\GetFirstRepeatingLetter.ps1 "sample nothing " (should return ' '
+     powershell -File .\GetFirstRepeatingLetter.ps1 ""                (should return '')
+     powershell -File .\GetFirstRepeatingLetter.ps1                   (should return '')
 #>
 
 
 # Call function
 $mystring = $args[0]
-$return_value = GetRepeatingLetter $mystring
+$return_value = GetFirstRepeatingLetter $mystring
 Write-Host "return value='$return_value'"
