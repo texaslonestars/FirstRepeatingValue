@@ -11,12 +11,12 @@
 #>
 
 <#
-        Function:  GetNonRepeatingLetter $mystring
+        Function:  GetRepeatingLetter $mystring
         Arguments: $foo = string of any length
         Return:    $return_value = first repeating character (blank if no repeating)
 #>
 
-Function GetNonRepeatingLetter {
+Function GetRepeatingLetter {
     param (
         [string[]]$foo
     )
@@ -59,5 +59,5 @@ Function GetNonRepeatingLetter {
 
 # Call function
 $mystring = $args[0]
-$return_value = GetNonRepeatingLetter $mystring
+$return_value = GetRepeatingLetter $mystring
 Write-Host "return value='$return_value'"
